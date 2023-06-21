@@ -23,7 +23,7 @@ public class testeConta {
 		contaBernadete.exibirSaldo();
 		contaJessica.exibirSaldo();
 		
-		contaJessica.sacar(5000);
+		contaJessica.sacar(10000);
 		contaBernadete.sacar(2000);
 		
 		contaBernadete.exibirSaldo();
@@ -39,6 +39,8 @@ public class testeConta {
 		contaJessica.investimento(Cdb, 1000);
 		System.out.println(contaJessica);
 		System.out.println(clienteJessica.getNomeTitular());
+		
+
 		
 		
 	}

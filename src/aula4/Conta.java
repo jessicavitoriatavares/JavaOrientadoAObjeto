@@ -1,4 +1,4 @@
-package aula4;
+ package aula4;
 
 import java.util.Date;
 
@@ -27,12 +27,12 @@ public abstract class Conta { // abstract proibe a instancia da classe - proibe 
 	// métodos:
 
 	// sacar
-	public boolean sacar(double valor) {
+	public boolean sacar(double valor) throws SaldoInsuficiente {
 		if (valor > 0) {
 			if (this.saldo >= valor) {
 				this.saldo -= valor;
 				return true;
-			}
+			} else throw new SaldoInsuficiente("Saldo insuficiente para saque");
 		}
 
 		return false;
@@ -42,21 +42,21 @@ public abstract class Conta { // abstract proibe a instancia da classe - proibe 
 	public void depositar(double valor) {
 		if (valor > 0) {
 			this.saldo += valor;
-		}
+		} 
 	}
 
 	// consultarSaldo
 	public abstract void exibirSaldo(); 
 
 	// transferir
-	public void transferir(Conta conta, double valor) {
+	public void transferir(Conta conta, double valor) throws SaldoInsuficiente {
 		boolean teste = this.sacar(valor);
 		if (teste == true) {
 			conta.depositar(valor);
-		}
-		
+		} else throw new SaldoInsuficiente("Saldo insuficiente para transferir");
 
 	}
+		
 	
 	public static void exibirContador()	{
 		System.out.println("Contas: " + contador);
