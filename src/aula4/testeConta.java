@@ -23,22 +23,22 @@ public class testeConta {
 		contaBernadete.exibirSaldo();
 		contaJessica.exibirSaldo();
 		
-		contaJessica.sacar(10000);
-		contaBernadete.sacar(2000);
-		
-		contaBernadete.exibirSaldo();
-		contaJessica.exibirSaldo();
-		
-		contaJessica.transferir(contaBernadete,1000);
-		
-		contaBernadete.exibirSaldo();
-		contaJessica.exibirSaldo();
-		
-		Conta.exibirContador();
-		
-		contaJessica.investimento(Cdb, 1000);
-		System.out.println(contaJessica);
-		System.out.println(clienteJessica.getNomeTitular());
+//		contaJessica.sacar(10000);
+//		contaBernadete.sacar(2000);
+//		
+//		contaBernadete.exibirSaldo();
+//		contaJessica.exibirSaldo();
+//		
+//		contaJessica.transferir(contaBernadete,1000);
+//		
+//		contaBernadete.exibirSaldo();
+//		contaJessica.exibirSaldo();
+//		
+//		Conta.exibirContador();
+//		
+//		contaJessica.investimento(Cdb, 1000);
+//		System.out.println(contaJessica);
+//		System.out.println(clienteJessica.getNomeTitular());
 		
 
 		
